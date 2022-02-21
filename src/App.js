@@ -44,12 +44,8 @@ function App() {
       <h2 className='high'>high priority</h2>
       <h2 className='low'>low priority</h2>
 
-      <ul>
-        {showTasks}
-      </ul>
-
       <form onSubmit={saveNewTask}>
-        <label htmlFor="to-do-task-input">Add a new to do task:</label>
+        <label htmlFor="to-do-task-input">New task:</label>
         <input type="text" name="to-do-task-input" id="to-do-task-input" value={newTask} onChange={handleTaskInput}/>
         <label htmlFor="task-low">Low</label>
         <input type="radio" name="priority" id="task-low" value="low" onChange={handleChange} defaultChecked/>
@@ -57,6 +53,10 @@ function App() {
         <input type="radio" name="priority" id="task-high" value="high" onChange={handleChange}/>
         <input type="submit" value="Save new task" />
       </form>
+
+      <ul>
+        {showTasks}
+      </ul>
 
     </div>
   );
